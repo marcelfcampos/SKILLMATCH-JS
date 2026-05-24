@@ -23,7 +23,7 @@ function finalizarAnalise(nome, callback) {
 }
 
 // ==========================================
-// 2. PROGRAMAÇÃO ORIENTADA A OBJETOS (POO)
+// 2. PROGRAMAÇÃO ORIENTADA A OBJETOS (POO) - Vaga Front-End
 // ==========================================
 
 class Vaga {
