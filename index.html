@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- LINK DO CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <title>SkillMatch JS — Simulador de Vagas</title>
+</head>
+
+<body>
+
+  <nav>
+    <a href="#" class="nav-logo">SkillMatch JS</a>
+    <span class="nav-tag">Mini-Projeto Avaliativo</span>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-label">Simulador Front-End Júnior</div>
+    <h1>Skill<br><em>Match</em></h1>
+    <p class="hero-desc">Análise de compatibilidade entre candidatos e vagas de desenvolvimento front-end. Clique em
+      executar para ver os resultados.</p>
+    <button class="btn-primary" id="runBtn" onclick="executarAnalise()">▶ Executar análise</button>
+  </section>
+
+  <div id="loading">
+    <span class="spinner"></span> Buscando vagas disponíveis...
+  </div>
+
+  <div id="results-section">
+
+    <section class="section" id="vagas">
+      <span class="sec-label sec-label-lt">01 / Análise</span>
+      <h2>Vagas Analisadas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Empresa / Cargo</th>
+            <th>Modalidade</th>
+            <th>Match</th>
+            <th>Habilidades</th>
+            <th>Status</th>
+            <th>Salário</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </section>
+
+    <section class="best" id="match">
+      <div class="best-inner">
+        <div>
+          <span class="sec-label" style="color:#333;">02 / Diagnóstico</span>
+          <h2>Melhor<br>Match</h2>
+          <p style="font-size:13px;color:#888;margin-top:16px;line-height:1.7;max-width:260px;" id="bestDesc"></p>
+        </div>
+        <div class="best-card">
+          <div class="best-co" id="bestCo"></div>
+          <div class="best-ca" id="bestCa"></div>
+          <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;">
+            <div class="best-pct" id="bestPct"></div>
+            <div class="best-pct-lbl">% de compatibilidade</div>
+          </div>
+          <div class="best-bar">
+            <div class="best-fill" id="bestFill"></div>
+          </div>
+          <div class="rec-title">Recomendações de estudo</div>
+          <div id="recItems"></div>
+          <div class="best-meta" id="bestMeta"></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <section class="candidato" id="candidato">
+    <div>
+      <div class="cand-label">03 / Candidato</div>
+      <div class="cand-name">Marcel</div>
+      <div class="cand-area">Front-End Development</div>
+      <div class="stat">
+        <div class="stat-lbl">Experiência</div>
+        <div class="stat-val">6 meses</div>
+      </div>
+      <div class="stat">
+        <div class="stat-lbl">Habilidades</div>
+        <div class="stat-val">3 mapeadas</div>
+      </div>
+      <div class="stat">
+        <div class="stat-lbl">Vagas analisadas</div>
+        <div class="stat-val" id="vagasCount">—</div>
+      </div>
+    </div>
+    <div>
+      <div class="skills-title">Habilidades atuais</div>
+      <div class="cskills">
+        <span class="csk">JavaScript</span>
+        <span class="csk">GitHub</span>
+        <span class="csk">Kanban</span>
+      </div>
+      <div class="skills-title">Conceitos JS aplicados</div>
+      <div class="concepts">
+        <div class="concept">
+          <div class="c-name">Closures</div>
+          <div class="c-desc">Contador de análises em memória sem expor ao escopo global</div>
+        </div>
+        <div class="concept">
+          <div class="c-name">Callbacks</div>
+          <div class="c-desc">Finalização do fluxo com função passada como argumento</div>
+        </div>
+        <div class="concept">
+          <div class="c-name">POO + Herança</div>
+          <div class="c-desc">VagaFrontEnd extends Vaga com super() e atributos extras</div>
+        </div>
+        <div class="concept">
+          <div class="c-name">Promise / Async</div>
+          <div class="c-desc">Simulação de busca em API com setTimeout e await</div>
+        </div>
+        <div class="concept">
+          <div class="c-name">Array.filter</div>
+          <div class="c-desc">Separa habilidades encontradas e faltantes por vaga</div>
+        </div>
+        <div class="concept">
+          <div class="c-name">Array.reduce</div>
+          <div class="c-desc">Identifica a vaga com maior percentual de match</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="f-logo">SkillMatch JS</div>
+    <div class="f-note">Mini-Projeto Avaliativo · Front-End Júnior · 2026</div>
+  </footer>
+
+  <script>
+    function criarContador() { let t = 0; return function () { return ++t; }; }
+    const contarAnalise = criarContador();
+
+    class Vaga {
+      constructor(e, c, r) { this.empresa = e; this.cargo = c; this.requisitos = r; }
+    }
+    class VagaFrontEnd extends Vaga {
+      constructor(e, c, r, n, s, m) { super(e, c, r); this.nivel = n; this.salario = s; this.modalidade = m; }
+      exibirResumo() { return `${this.cargo} — ${this.empresa}`; }
+    }
+
+    const bancoDeVagas = [
+      new VagaFrontEnd("TechStart", "Dev Front-End Jr", ["JavaScript", "GitHub", "Arrays", "CSS"], "Júnior", 3000, "Remoto"),
+      new VagaFrontEnd("DevCorp", "Dev Front-End Jr", ["JavaScript", "GitHub", "Kanban", "React"], "Júnior", 3500, "Híbrido"),
+      new VagaFrontEnd("WebFlow Studio", "Dev Front-End Jr", ["HTML", "CSS", "Design Responsivo"], "Júnior", 2800, "Presencial"),
+    ];
+
+    const candidato = { nome: "Marcel", habilidades: ["JavaScript", "GitHub", "Kanban"] };
+
+    function buscarVagas() { return new Promise(r => setTimeout(() => r(bancoDeVagas), 1200)); }
+    function finalizarAnalise(n, cb) { cb(n); }
+
+    function analisar(cand, vaga) {
+      const enc = vaga.requisitos.filter(r => cand.habilidades.includes(r));
+      const falt = vaga.requisitos.filter(r => !cand.habilidades.includes(r));
+      const pct = Math.round((enc.length / vaga.requisitos.length) * 100);
+      const cls = pct >= 80 ? "Alta" : pct >= 50 ? "Média" : "Baixa";
+      return { vaga, pct, cls, enc, falt, n: contarAnalise() };
+    }
+
+    function fillClass(pct) { return pct >= 80 ? "f-alta" : pct >= 50 ? "f-media" : "f-baixa"; }
+    function badgeClass(cls) { return cls === "Alta" ? "b-alta" : cls === "Média" ? "b-media" : "b-baixa"; }
+
+    function renderTabela(resultados) {
+      const tbody = document.getElementById('tableBody');
+      tbody.innerHTML = resultados.map(r => `
+    <tr>
+      <td><div class="co">${r.vaga.empresa}</div><div class="ca">${r.vaga.cargo}</div></td>
+      <td><span class="mono">${r.vaga.modalidade}</span></td>
+      <td>
+        <div class="pct">${r.pct}%</div>
+        <div class="bar"><div class="fill ${fillClass(r.pct)}" data-w="${r.pct}"></div></div>
+      </td>
+      <td>
+        <div class="skills">
+          ${r.enc.map(s => `<span class="sk sk-ok">${s}</span>`).join('')}
+          ${r.falt.map(s => `<span class="sk sk-no">${s}</span>`).join('')}
+        </div>
+      </td>
+      <td><span class="badge ${badgeClass(r.cls)}">${r.cls}</span></td>
+      <td><span class="mono">R$ ${r.vaga.salario.toLocaleString('pt-BR')}</span></td>
+    </tr>
+  `).join('');
+    }
+
+    function renderBest(melhor) {
+      document.getElementById('bestCo').textContent = melhor.vaga.empresa;
+      document.getElementById('bestCa').textContent = `${melhor.vaga.cargo} (${melhor.vaga.nivel}) · ${melhor.vaga.modalidade}`;
+      document.getElementById('bestPct').textContent = melhor.pct;
+      document.getElementById('bestDesc').textContent = `A ${melhor.vaga.empresa} apresenta maior aderência ao perfil atual do candidato.`;
+      const fill = document.getElementById('bestFill');
+      fill.style.width = '0';
+      setTimeout(() => { fill.style.width = melhor.pct + '%'; }, 100);
+
+      const recs = document.getElementById('recItems');
+      if (melhor.falt.length) {
+        recs.innerHTML = melhor.falt.map(s => `<div class="rec-item">Estude: ${s}</div>`).join('');
+      } else {
+        recs.innerHTML = '<div class="rec-item">Perfil completo para esta vaga!</div>';
+      }
+
+      document.getElementById('bestMeta').innerHTML = `
+    <div class="bm"><span>Salário</span><strong>R$ ${melhor.vaga.salario.toLocaleString('pt-BR')}/mês</strong></div>
+    <div class="bm"><span>Modalidade</span><strong>${melhor.vaga.modalidade}</strong></div>
+    <div class="bm"><span>Nível</span><strong>${melhor.vaga.nivel}</strong></div>
+  `;
+    }
+
+    async function executarAnalise() {
+      const btn = document.getElementById('runBtn');
+      const loading = document.getElementById('loading');
+      const resultsSection = document.getElementById('results-section');
+
+      btn.disabled = true;
+      loading.style.display = 'block';
+      resultsSection.style.display = 'none';
+
+      const vagas = await buscarVagas();
+      const resultados = vagas.map(v => analisar(candidato, v));
+      const melhor = resultados.reduce((a, b) => b.pct > a.pct ? b : a);
+
+      loading.style.display = 'none';
+      renderTabela(resultados);
+      renderBest(melhor);
+
+      document.getElementById('vagasCount').textContent = `${resultados.length} oportunidades`;
+      resultsSection.style.display = 'block';
+
+      requestAnimationFrame(() => {
+        document.querySelectorAll('.fill[data-w]').forEach(el => {
+          el.style.width = el.getAttribute('data-w') + '%';
+        });
+      });
+
+      finalizarAnalise(candidato.nome, n => {
+        console.log(`✅ Análise de ${n} concluída! ${resultados.length} vagas analisadas.`);
+      });
+
+      btn.textContent = '↺ Executar novamente';
+      btn.disabled = false;
+      document.getElementById('vagas').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+
+</html>
