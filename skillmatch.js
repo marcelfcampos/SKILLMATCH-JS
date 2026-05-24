@@ -55,7 +55,7 @@ class VagaFrontEnd extends Vaga {
 }
 
 // ==========================================
-// 3. ESTRUTURA DE DADOS (Candidato e Vagas)
+// 3. ESTRUTURA DE DADOS (Candidato e Vagas) 
 // ==========================================
 
 const candidato = {
@@ -135,8 +135,8 @@ function analisarVaga(candidato, vaga) {
     percentual >= 80
       ? "Alta compatibilidade"
       : percentual >= 50
-      ? "Média compatibilidade"
-      : "Baixa compatibilidade";
+        ? "Média compatibilidade"
+        : "Baixa compatibilidade";
 
   return {
     vaga: vaga.exibirResumo(),
