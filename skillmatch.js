@@ -130,7 +130,7 @@ function analisarVaga(candidato, vaga) {
   const requisitosAtendidos = habilidadesEncontradas.length;
   const percentual = (requisitosAtendidos / totalDeRequisitos) * 100;
 
-  // Operador ternário para classificação por faixa de percentual
+  // Operador ternário para classificação por faixa de percentual (compatibilidade)
   const classificacao =
     percentual >= 80
       ? "Alta compatibilidade"
