@@ -55,7 +55,7 @@ class VagaFrontEnd extends Vaga {
 }
 
 // ==========================================
-// 3. ESTRUTURA DE DADOS (Candidato e Vagas) 
+// 3. ESTRUTURA DE DADOS (Candidato e Vagas) - Adicionar dados do candidato e vagas:
 // ==========================================
 
 const candidato = {
