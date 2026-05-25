@@ -6,31 +6,21 @@
 node skillmatch.js
 ```
 
-### Interface Visual
+#### Interface Visual
 
-```bash
 1. Abrir o arquivo principal no navegador ➔ index.html
-```
 
-```bash
 2. Iniciar a simulação ➔ Na tela principal da interface, clique no botão "Executar Análise".
-```
 
-```bash
 3. Visualize e interaja com os gráficos de compatibilidade gerados dinamicamente.
-```
 
 ## SkillMatch JS — Interface de Match Front-End
 
 [![SkillMatch JS - Interface de Match Front-End](./img/preview.png)](https://skillmatch-js.vercel.app/)
 
----
-
-    Demonstração do Projeto: SkillMatch JS
+## Demonstração: Projeto SkillMatch JS
 
 🔗 [Vercel (Deploy)](https://skillmatch-js.vercel.app/)
-
----
 
 ## Tecnologias Utilizadas
 
@@ -129,9 +119,7 @@ No projeto, a função com Promise simula uma busca de dados em um servidor.
 - [x] Gravar vídeo (máximo 5 minutos)
 - [x] Enviar links no AVA
 
-```bash
-Links do Projeto:
-```
+## Links do Projeto:
 
 🔗 [Vercel (Deploy)](https://skillmatch-js.vercel.app/)
 
@@ -139,9 +127,7 @@ Links do Projeto:
 
 🔗 [Repositório GitHub](https://github.com/marcelfcampos/SKILLMATCH-JS)
 
-```bash
-Redes Sociais:
-```
+## Redes Sociais:
 
 🔗 [LinkedIn](https://www.linkedin.com/in/marcelfcampos/)
 
@@ -149,8 +135,6 @@ Redes Sociais:
 
 🔗 [GitHub](https://github.com/marcelfcampos)
 
-```bash
-Autor:  Marcel Ferreira Campos
-```
+## Autor: Marcel Ferreira Campos
 
 Formado em Arquitetura e Urbanismo, trago para a área de tecnologia a combinação entre pensamento criativo e estruturado, aplicando conceitos de design, usabilidade e lógica construtiva ao desenvolvimento de interfaces digitais.
