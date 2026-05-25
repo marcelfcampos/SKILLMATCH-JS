@@ -67,7 +67,7 @@ Esse modelo é conhecido como arquitetura cliente-servidor.
 
 No projeto, a função com Promise simula uma busca de dados em um servidor.
 
-## Organização Trello (Kanban)
+## Organização do Trello (Kanban)
 
 - Material de apoio
 - Pronto para iniciar
