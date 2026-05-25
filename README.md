@@ -56,7 +56,15 @@ node skillmatch.js
 
 ## SkillMatch JS — Interface de Match Front-End
 
-[![SkillMatch JS](./img/preview.png)](https://github.com/seuusuario/skillmatch-js)
+[![SkillMatch JS - Interface de Match Front-End](./img/preview.png)](https://skillmatch-js.vercel.app/)
+
+---
+
+    Demonstração do Projeto: SkillMatch JS
+
+🔗 [Vercel (Deploy)](https://skillmatch-js.vercel.app/)
+
+---
 
 ## Tecnologias Utilizadas
 
@@ -92,7 +100,7 @@ node skillmatch.js
 
 A internet funciona como uma rede global de computadores conectados entre si.
 
-- Quando um usuário acessa um site:
+Quando um usuário acessa um site:
 
 1. O navegador envia uma requisição;
 2. O servidor recebe essa requisição;
@@ -103,12 +111,13 @@ Esse modelo é conhecido como arquitetura cliente-servidor.
 
 No projeto, a função com Promise simula uma busca de dados em um servidor.
 
-## Organização Kanban
+## Organização Trello (Kanban)
 
-- Colunas utilizadas
-- Backlog
-- A Fazer
-- Em Andamento
+- Material de apoio
+- Pronto para iniciar
+- Desenvolvendo
+- Pausado
+- Concluido
 
 ## Tarefas do Projeto
 
@@ -226,6 +235,28 @@ No projeto, a função com Promise simula uma busca de dados em um servidor.
   - Submeter atividade no AVA
   - Confirmar envio realizado com sucesso
 
-## Autor
+---
 
-Marcel Ferreira Campos é arquiteto, desenvolvedor web e estudante de Desenvolvimento Front-End. O projeto SkillMatch JS foi desenvolvido no Mini-Projeto Avaliativo Front-End Júnior 2026, promovido pelo SCTEC em parceria com o SENAI/SC.
+    Links do Projeto:
+
+🔗 [Trello (Kanban)](https://trello.com/invite/b/6a138cdef4f67243b42956ac/ATTIe37fb1a53ce14355f5d31302e99152b2B8B87FED/skillmatch-js)
+
+🔗 [Repositório GitHub](https://github.com/marcelfcampos/SKILLMATCH-JS)
+
+---
+
+    Redes Sociais:
+
+🔗 [LinkedIn](https://www.linkedin.com/in/marcelfcampos/)
+
+🔗 [Instagram](https://www.instagram.com/arqmarcelcampos/)
+
+🔗 [GitHub](https://github.com/marcelfcampos)
+
+---
+
+    Autor:  Marcel Ferreira Campos
+
+Formado em Arquitetura e Urbanismo, trago para a área de tecnologia a combinação entre pensamento criativo e estruturado, aplicando conceitos de design, usabilidade e lógica construtiva ao desenvolvimento de interfaces digitais.
+
+---
