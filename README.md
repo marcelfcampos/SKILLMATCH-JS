@@ -239,7 +239,9 @@ No projeto, a função com Promise simula uma busca de dados em um servidor.
 
     Links do Projeto:
 
-🔗 [Trello (Kanban)](https://trello.com/invite/b/6a138cdef4f67243b42956ac/ATTIe37fb1a53ce14355f5d31302e99152b2B8B87FED/skillmatch-js)
+🔗 [Vercel (Deploy)](https://skillmatch-js.vercel.app/)
+
+🔗 [Trello (Kanban)](https://trello.com/invite/b/6a138cdef4f67243b42956ac/...)
 
 🔗 [Repositório GitHub](https://github.com/marcelfcampos/SKILLMATCH-JS)
 
