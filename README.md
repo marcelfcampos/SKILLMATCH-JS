@@ -1,37 +1,3 @@
-# SkillMatch JS
-
-Simulador de compatibilidade entre candidatos e vagas de emprego Front-End Júnior, desenvolvido com JavaScript puro como Mini-Projeto Avaliativo do módulo de Programação Front-End React.
-
-## Sobre o Projeto
-
-O **SkillMatch JS** é um sistema simples que analisa o perfil técnico de um candidato e compara suas habilidades com os requisitos de vagas fictícias da área Front-End.
-
-#### O projeto realiza:
-
-- comparação de habilidades;
-- cálculo de compatibilidade;
-- identificação de habilidades faltantes;
-- classificação das vagas;
-- recomendação de estudos;
-- simulação de carregamento de dados com Promise e async/await.
-
-## Objetivo
-
-Desenvolver um mini-sistema utilizando conceitos fundamentais de JavaScript, lógica de programação, Programação Orientada a Objetos (POO), versionamento com GitHub e organização com Kanban.
-
-## Estrutura do projeto
-
-```
-SKILLMATCH-JS/
-├── img/
-│   └── preview.png
-├── .gitignore
-├── index.html
-├── README.md
-├── skillmatch.js
-└── style.css
-```
-
 ## Como Executar
 
 #### Terminal / Node.js
@@ -123,117 +89,45 @@ No projeto, a função com Promise simula uma busca de dados em um servidor.
 
 #### Estrutura Inicial
 
-- [ x ] Criar pasta do projeto
-- [ x ] Criar arquivo `skillmatch.js`
-- [ x ] Criar arquivo `README.md`
-- [ x ] Criar `index.html`
-- [ x ] Criar `style.css`
+- [x] Criar pasta do projeto
+- [x] Criar arquivo `skillmatch.js`
+- [x] Criar arquivo `README.md`
+- [x] Criar `index.html`
+- [x] Criar `style.css`
 
 #### Desenvolvimento
 
-- [ x ] Criar pasta do projeto
-- [ x ] Criar array de vagas
-- [ x ] Criar cálculo de compatibilidade
-- [ x ] Criar classificação por percentual
-- [ x ] Criar listagem de habilidades faltantes
-- [ x ] Encontrar melhor vaga
-- [ x ] Criar recomendação de estudo
+- [x] Criar array de vagas
+- [x] Criar cálculo de compatibilidade
+- [x] Criar classificação por percentual
+- [x] Criar listagem de habilidades faltantes
+- [x] Encontrar melhor vaga
+- [x] Criar recomendação de estudo
 
 #### JavaScript Avançado
 
-- [ x ] Aplicar map
-- [ x ] Aplicar filter
-- [ x ] Aplicar reduce
-- [ x ] Aplicar find
-- [ x ] Aplicar every
-- [ x ] Criar classe Vaga
-- [ x ] Criar herança VagaFrontEnd
-- [ x ] Demonstrar uso de this
-- [ x ] Criar callback
-- [ x ] Criar closure
-- [ x ] Criar Promise
-- [ x ] Aplicar async/await
+- [x] Aplicar map
+- [x] Aplicar filter
+- [x] Aplicar reduce
+- [x] Aplicar find
+- [x] Aplicar every
+- [x] Criar classe Vaga
+- [x] Criar herança VagaFrontEnd
+- [x] Demonstrar uso de this
+- [x] Criar callback
+- [x] Criar closure
+- [x] Criar Promise
+- [x] Aplicar async/await
 
 #### Organização e Entrega
 
-- [ x ] Criar repositório GitHub
-  - Criar conta no GitHub (caso necessário)
-  - Criar repositório público skillmatch-js
-  - Adicionar descrição do projeto
-  - Adicionar arquivo .gitignore
-  - Fazer primeiro commit da estrutura inicial
-  - Validar acesso público ao repositório
-
-- [ x ] Criar branches
-  - Branches mínima:
-    - Para projeto individual:
-      - main;
-      - develop;
-      - feat/analise-vagas;
-      - docs/readme.
-
-  - Criar branch main
-  - Criar branch develop
-  - Criar branch feat/analise-vagas
-  - Criar branch docs/readme
-  - Testar troca de branches
-  - Fazer merge das branches no develop
-  - Atualizar branch main
-
-- [ x ] Realizar commits
-  - Commits Mínimos (5):
-    - Para projeto individual:
-      - feat: cria estrutura inicial do projeto
-      - feat: adiciona dados do candidato e vagas
-      - feat: implementa cálculo de compatibilidade
-      - feat: adiciona classe VagaFrontEnd
-      - feat: cria simulação com promise e async await
-      - docs: atualiza readme com instruções
-      - fix: corrige cálculo de percentual
-
-- [ x ] Atualizar README
-  - Adicionar descrição do projeto
-  - Explicar objetivo do sistema
-  - Explicar como executar o projeto
-  - Adicionar estrutura de pastas
-  - Explicar funcionalidades implementadas
-  - Adicionar tecnologias utilizadas
-  - Explicar Promise e async/await
-  - Explicar arquitetura cliente-servidor
-  - Explicar como a internet funciona
-  - Adicionar extensões recomendadas do VS Code
-  - Inserir checklist do projeto
-  - Adicionar link do Kanban
-  - Adicionar link do vídeo
-
-- [ x ] Testar sistema
-  - Executar código no navegador
-  - Executar código no VS Code
-  - Validar cálculo de compatibilidade
-  - Validar classificação das vagas
-  - Validar habilidades faltantes
-  - Validar recomendação de estudo
-  - Testar Promise simulada
-  - Testar async/await
-  - Corrigir possíveis erros encontrados
-
-- [ x ] Gravar vídeo (máximo 5 minutos)
-  - Preparar roteiro da apresentação
-  - Demonstrar a execução do sistema
-  - Explicar estrutura do projeto
-  - Explicar branches utilizadas
-  - Explicar organização no Kanban
-  - Explicar melhorias futuras
-  - Publicar vídeo no Google Drive ou YouTube
-  - Configurar permissão pública do link
-
-- [ x ] Enviar links no AVA
-  - Copiar link do repositório GitHub
-  - Copiar link do quadro Kanban
-  - Copiar link do vídeo
-  - Revisar se todos os links funcionam
-  - Submeter atividade no AVA
-  - Confirmar envio realizado com sucesso
+- [x] Criar repositório GitHub
+- [x] Criar branches (main, develop, feat/analise-vagas, docs/readme)
+- [x] Realizar commits (mínimo 5)
+- [x] Atualizar README
+- [x] Testar sistema
+- [x] Gravar vídeo (máximo 5 minutos)
+- [x] Enviar links no AVA
 
 ---
 
@@ -241,7 +135,7 @@ No projeto, a função com Promise simula uma busca de dados em um servidor.
 
 🔗 [Vercel (Deploy)](https://skillmatch-js.vercel.app/)
 
-🔗 [Trello (Kanban)](https://trello.com/invite/b/6a138cdef4f67243b42956ac/...)
+🔗 [Trello (Kanban)](https://trello.com/invite/b/6a138cdef4f67243b42956ac/ATTIe37fb1a53ce14355f5d31302e99152b2B8B87FED/skillmatch-js)
 
 🔗 [Repositório GitHub](https://github.com/marcelfcampos/SKILLMATCH-JS)
 
@@ -260,5 +154,3 @@ No projeto, a função com Promise simula uma busca de dados em um servidor.
     Autor:  Marcel Ferreira Campos
 
 Formado em Arquitetura e Urbanismo, trago para a área de tecnologia a combinação entre pensamento criativo e estruturado, aplicando conceitos de design, usabilidade e lógica construtiva ao desenvolvimento de interfaces digitais.
-
----
