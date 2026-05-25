@@ -1,3 +1,37 @@
+# SkillMatch JS
+
+Simulador de compatibilidade entre candidatos e vagas de emprego Front-End Júnior, desenvolvido com JavaScript puro como Mini-Projeto Avaliativo do módulo de Programação Front-End React.
+
+## Sobre o Projeto
+
+O **SkillMatch JS** é um sistema simples que analisa o perfil técnico de um candidato e compara suas habilidades com os requisitos de vagas fictícias da área Front-End.
+
+#### O projeto realiza:
+
+- comparação de habilidades;
+- cálculo de compatibilidade;
+- identificação de habilidades faltantes;
+- classificação das vagas;
+- recomendação de estudos;
+- simulação de carregamento de dados com Promise e async/await.
+
+## Objetivo
+
+Desenvolver um mini-sistema utilizando conceitos fundamentais de JavaScript, lógica de programação, Programação Orientada a Objetos (POO), versionamento com GitHub e organização com Kanban.
+
+## Estrutura do projeto
+
+```
+skillmatch-js/
+├── img/
+│   └── preview.png
+├── .gitignore
+├── index.html
+├── README.md
+├── skillmatch.js
+└── style.css
+```
+
 ## Como Executar
 
 #### Terminal / Node.js
@@ -67,7 +101,7 @@ Esse modelo é conhecido como arquitetura cliente-servidor.
 
 No projeto, a função com Promise simula uma busca de dados em um servidor.
 
-## Organização do Trello -  (Kanban)
+## Organização do Trello - (Kanban)
 
 - Material de apoio
 - Pronto para iniciar
