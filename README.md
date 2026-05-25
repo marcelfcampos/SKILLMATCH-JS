@@ -129,9 +129,9 @@ No projeto, a função com Promise simula uma busca de dados em um servidor.
 - [x] Gravar vídeo (máximo 5 minutos)
 - [x] Enviar links no AVA
 
----
-
-    Links do Projeto:
+```bash
+Links do Projeto:
+```
 
 🔗 [Vercel (Deploy)](https://skillmatch-js.vercel.app/)
 
@@ -139,9 +139,9 @@ No projeto, a função com Promise simula uma busca de dados em um servidor.
 
 🔗 [Repositório GitHub](https://github.com/marcelfcampos/SKILLMATCH-JS)
 
----
-
-    Redes Sociais:
+```bash
+Redes Sociais:
+```
 
 🔗 [LinkedIn](https://www.linkedin.com/in/marcelfcampos/)
 
@@ -149,8 +149,8 @@ No projeto, a função com Promise simula uma busca de dados em um servidor.
 
 🔗 [GitHub](https://github.com/marcelfcampos)
 
----
-
-    Autor:  Marcel Ferreira Campos
+```bash
+Autor:  Marcel Ferreira Campos
+```
 
 Formado em Arquitetura e Urbanismo, trago para a área de tecnologia a combinação entre pensamento criativo e estruturado, aplicando conceitos de design, usabilidade e lógica construtiva ao desenvolvimento de interfaces digitais.
